@@ -10,4 +10,8 @@ class SessionsController < ApplicationController
     end
   end
 
+  def destroy
+    sign_out_user
+    redirect_to home_path
+  end
 end

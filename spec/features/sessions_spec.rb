@@ -5,7 +5,7 @@ feature 'Sessions' do
     create :user, email: 'jam@example.com', password: 'password'
   end
 
-  scenario 'User signs in' do
+  scenario 'User signs in and out' do
     visit '/sign_in'
     fill_in 'Email', with: 'jam@example.com'
     fill_in 'Password', with: 'password'
@@ -14,6 +14,12 @@ feature 'Sessions' do
     expect(current_path).to eql '/'
     expect(page).to have_content 'signed in as: jam@example.com'
     expect(page).not_to have_content 'Sign in'
+
+    click_link 'Sign out'
+
+    expect(current_path).to eql '/'
+    expect(page).not_to have_content 'signed in as: jam@example.com'
+    expect(page).to have_content 'Sign in'
   end
 
   scenario 'User fails sign in' do

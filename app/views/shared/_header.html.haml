@@ -2,3 +2,8 @@
   .navbar-fixed-top
     %h3.navbar-link.pull-left
       = link_to "Dinner Dash", home_path
+    %h4.navbar-link.pull-right
+      - if current_user
+        = "You're signed in as: #{current_user.email}"
+      - else
+        = link_to "Sign in | ", sign_in_path

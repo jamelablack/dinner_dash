@@ -1,0 +1,28 @@
+%section.navbar-custom
+  %h1.col-md-2
+    %a(href="#") Dinner Dash
+  %ul.col-md-5.clearfix
+    %li
+      %a(href="#") All Items
+  %nav.navbar-form.navbar-left(role="search")
+    .form-group
+      %input.form-control(name="search_term" type="text" placeholder="Items Quick Search")
+    %button.btn.btn-default(type="submit") Search
+  .navbar-form.navbar-right
+    .form-group
+      %input.form-control(name="username" type="text" placeholder="username")
+      %input.form-control(name="password" type="text" placeholder="password")
+    %button.btn.btn-default.navbar-btn(type="button") Sign in
+    %button.btn.btn-default.navbar-btn(type="button") Register
+    %ul.nav.navbar-nav.navbar-right
+    %ul.nav.navbar-nav.navbar-right
+      %li.dropdown
+        %a(href="#" role="button" data-toggle="dropdown" class="dropdown-toggle" data-target="#" aria-haspopup="true" aria-expanded="false")
+        Welcome, jahn.doe@example.com
+        %b.caret
+      %ul.dropdown-menu
+        %li
+          %a(href="#") Sign in/Sign out
+          %a(href="#") Cart
+          %a(href="#") Past Orders
+          %a(href="#") Account

@@ -1,0 +1,62 @@
+%select
+  %option %section.admin_dashboard
+  %header
+    %h1 Admin Dashboard
+  %section
+  %ul
+    %li
+      %a(href="#") Dashboard
+      %a(href="#") Items
+      %a(href="#") Categories
+      %a(href="#") Orders
+      %a(href="#") Sales
+  %section
+    %h3 Orders
+    %table
+      %tr
+        %th Order ID
+        %th Status
+        %th Customer
+        %th Date
+      %tr
+        %td 123456
+        %td Paid
+        %td John Doe
+        %td 01/01/2015
+
+    %h3 Sales
+    %table
+      %tr
+        %th Transaction ID
+        %th Price
+        %th Customer
+        %th Date
+      %tr
+        %td 123456
+        %td $13.00
+        %td John Doe
+        %td 01/01/2015
+
+    %h3 Items
+    %a(href="#") Add Item
+    %table
+      %tr
+        %th Name
+        %th Category
+        %th Price
+        %th Last Updated
+      %tr
+        %td Hummus with Pita
+        %td Appetizer
+        %td $13.00
+        %td 01/01/2015
+
+    %h3 Categories
+    %a(href="#") Add Category
+    %table
+      %tr
+        %th Name
+        %th No. of Items
+      %tr
+        %td Appetizer
+        %td 12

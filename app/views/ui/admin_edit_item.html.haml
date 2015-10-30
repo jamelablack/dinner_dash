@@ -1,0 +1,36 @@
+%section.admin_items
+  %header
+    %h1 Admin Dashboard
+    %h3 Items
+    %h4 Edit Item: Tofu Dog
+  %section
+    %ul
+      %li
+        %a(href="#") Dashboard
+        %a(href="#") Items
+        %a(href="#") Categories
+        %a(href="#") Orders
+        %a(href="#") Sales
+  %form
+    %fieldset
+      .row
+        %label Item ID
+        %input(type="text" value="123456")
+      .row
+        %label Name
+        %input(type="text" value="Tofu Dog")
+      .row
+        %label Price
+        %input(type="text" value="$12.00")
+      .row
+        %label Category
+        %input(type="text" value="appetizer, vegan")
+      .row
+        %label Description
+        %input(type="text" value="meatless hot dog")
+      .row
+        %label Image
+        %input(type="text" value="tofu_dog.jpg")
+        %input(type="file" name="image")
+    %button(name="submit" placeholder="save") Save
+

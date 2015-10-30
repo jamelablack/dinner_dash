@@ -1,0 +1,36 @@
+%section.admin_items
+  %header
+    %h1 Admin Dashboard
+    %h3 Items
+    %h4 Add Item
+  %section
+    %ul
+      %li
+        %a(href="#") Dashboard
+        %a(href="#") Items
+        %a(href="#") Categories
+        %a(href="#") Orders
+        %a(href="#") Sales
+    %a(href="#") Add Item
+  %form
+    %fieldset
+      .row
+        %label Item ID
+        %input(type="text" placeholder="item id")
+      .row
+        %label Name
+        %input(type="text" placeholder="name")
+      .row
+        %label Price
+        %input(type="text" placeholder="price")
+      .row
+        %label Category
+        %input(type="text" placeholder="categories")
+      .row
+        %label Description
+        %input(type="text" placeholder="description")
+      .row
+        %label Image
+        %input(type="file" placeholder="image")
+    %button(name="submit" placeholder="save") Save
+

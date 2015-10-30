@@ -1,23 +1,17 @@
-%section.register.container
-   .row
-     .col-sm-10.col-sm-offset-1
-       %form.form-horizontal
-         %header
-           %h1 Register
+%section.register
+   %form
+      %header
+         %h1 Register
          %fieldset
-           .form-group
-             %label.control-label.col-sm-2 Email Address
-             .col-sm-6
-               %input.form-control(type="email")
-           .form-group
-             %label.control-label.col-sm-2 Password
-             .col-sm-6
-               %input.form-control(type="password")
-           .form-group
-             %label.control-label.col-sm-2 Confirm Password
-             .col-sm-6
-               %input.form-control(type="password confirmation")
-         %fieldset.actions.control-group.col-sm-offset-2
-           .controls
-             %input(type="submit" value="Sign Up" class="btn btn-default")
+            .row
+               %label Email Address
+               %input(type="email")
+            .row
+               %label Password
+               %input(type="password")
+            .row
+               %label Confirm Password
+               %input(type="password confirmation")
+         %fieldset
+            %button(type="submit" value="Sign Up") Sign Up
 

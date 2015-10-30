@@ -1,0 +1,36 @@
+%section.admin_category
+  %header
+    %h1 Admin Dashboard
+    %h3 Categories
+    %h4 Edit Category: Savory
+  %section
+  %ul
+    %li
+      %a(href="#") Dashboard
+      %a(href="#") Items
+      %a(href="#") Categories
+      %a(href="#") Orders
+      %a(href="#") Sales
+  %select(name="select")
+    %option
+      Edit
+    %option
+      Delete
+  %section
+    %p Name
+    %input(name="category" type="text" placeholder="category name")
+    %table
+      %tr
+        %th Item Position
+        %th Item ID
+        %th Name
+        %th Category
+        %th Price ($)
+      %tr
+        %td 1
+        %td 123456
+        %td Tofu Dog
+        %td Savory
+        %td $12.00
+
+    %button(type="submit") Save

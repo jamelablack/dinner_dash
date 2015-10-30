@@ -1,0 +1,40 @@
+%section.admin_items
+  %header
+    %h1 Admin Dashboard
+    %h3 Items
+  %section
+    %ul
+      %li
+        %a(href="#") Dashboard
+        %a(href="#") Items
+        %a(href="#") Categories
+        %a(href="#") Orders
+        %a(href="#") Sales
+    %a(href="#") Add Item
+  %section
+    %table
+      %tr
+        %th Item Position
+        %th Item ID
+        %th Name
+        %th Category
+        %th Price ($)
+        %th Last Updated
+        %th Actions
+      %tr
+        %td 1
+        %td 123456
+        %td Tofu Dog
+        %td Savory
+        %td $12.00
+        %td 01/01/2015
+        %td
+          %select(name="select")
+            %option
+              Edit
+            %option
+              Delete
+            %option
+              Retire
+
+    %button(type="submit") Done

@@ -1,36 +1,34 @@
-%section.admin_category
-  %header
-    %h1 Admin Dashboard
-    %h3 Categories
-    %h4 Edit Category: Savory
-  %section
-  %ul
-    %li
-      %a(href="#") Dashboard
-      %a(href="#") Items
-      %a(href="#") Categories
-      %a(href="#") Orders
-      %a(href="#") Sales
-  %select(name="select")
-    %option
-      Edit
-    %option
-      Delete
-  %section
-    %p Name
-    %input(name="category" type="text" placeholder="category name")
-    %table
-      %tr
-        %th Item Position
-        %th Item ID
-        %th Name
-        %th Category
-        %th Price ($)
-      %tr
-        %td 1
-        %td 123456
-        %td Tofu Dog
-        %td Savory
-        %td $12.00
+%article.admin_nav
+  %ul(class="nav nav-tabs")
+    %li(role="presentation")
+      %a(href="/ui/admin_dashboard") Dashboard
+    %li(role="presentation")
+      %a(href="/ui/admin_items") Items
+    %li(role="presentation" class="active")
+      %a(href="/ui/admin_categories") Categories
+    %li(role="presentation")
+      %a(href="/ui/admin_orders") Orders
+    %li(role="presentation")
+      %a(href="/ui/admin_sales") Sales
 
-    %button(type="submit") Save
+%article.admin_add_category
+  %header
+    %h3 Admin: Categories
+  %ul(class="nav nav-pills")
+    %li(role="presentation")
+      %a(href="/ui/admin_categories") All
+    %li(role="presentation")
+      %a(href="/ui/admin_add_category") Add
+    %li(role="presentation" class="active")
+      %a(href="/ui/admin_add_category") Edit
+  .container
+    %form.form-horizontal
+      %fieldset
+        .form-group
+          %label.control-label.col-sm-3  Category Name
+          .col-sm-6
+            %input.form-control(name="category" type="text" placeholder="category name")
+          %fieldset.actions.form-group
+            .col-sm-6
+              %button(type="submit" class="btn btn-success") Update
+

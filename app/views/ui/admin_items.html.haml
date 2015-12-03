@@ -1,18 +1,26 @@
-%section.admin_items
+%article.admin_nav
+  %ul(class="nav nav-tabs")
+    %li(role="presentation")
+      %a(href="/ui/admin_dashboard") Dashboard
+    %li(role="presentation" class="active")
+      %a(href="/ui/admin_items") Items
+    %li(role="presentation")
+      %a(href="/ui/admin_categories") Categories
+    %li(role="presentation")
+      %a(href="/ui/admin_orders") Orders
+    %li(role="presentation")
+      %a(href="/ui/admin_sales") Sales
+
+%article.admin_add_category
   %header
-    %h1 Admin Dashboard
-    %h3 Items
-  %section
-    %ul
-      %li
-        %a(href="#") Dashboard
-        %a(href="#") Items
-        %a(href="#") Categories
-        %a(href="#") Orders
-        %a(href="#") Sales
-    %a(href="#") Add Item
-  %section
-    %table
+    %h3 Admin: Items
+  %ul(class="nav nav-pills")
+    %li(role="presentation" class="active")
+      %a(href="/ui/admin_items") All
+    %li(role="presentation")
+      %a(href="/ui/admin_add_item") Add
+  .container
+    %table(class="table table-striped")
       %tr
         %th Item Position
         %th Item ID
@@ -20,7 +28,9 @@
         %th Category
         %th Price ($)
         %th Last Updated
-        %th Actions
+        %th Edit
+        %th Delete
+        %th Retire
       %tr
         %td 1
         %td 123456
@@ -29,12 +39,24 @@
         %td $12.00
         %td 01/01/2015
         %td
-          %select(name="select")
-            %option
-              Edit
-            %option
-              Delete
-            %option
-              Retire
+          %button(type="submit" class="btn btn-warning") Edit
+        %td
+          %button(class="btn btn-danger" type="submit") Delete
+        %td
+          %button(class="btn btn-default" type="submit") Retire
 
-    %button(type="submit") Done
+
+      %tr
+        %td 2
+        %td 1828757
+        %td Black Bean Burger
+        %td Savory
+        %td $11.99
+        %td 10/12/2014
+        %td
+          %button(type="submit" class="btn btn-warning") Edit
+        %td
+          %button(class="btn btn-danger" type="submit") Delete
+        %td
+          %button(class="btn btn-default" type="submit") Retire
+

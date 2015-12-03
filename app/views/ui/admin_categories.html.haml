@@ -1,40 +1,50 @@
-%section.admin_category
+%article.admin_nav
+  %ul(class="nav nav-tabs")
+    %li(role="presentation")
+      %a(href="/ui/admin_dashboard") Dashboard
+    %li(role="presentation")
+      %a(href="/ui/admin_items") Items
+    %li(role="presentation" class="active")
+      %a(href="/ui/admin_categories") Categories
+    %li(role="presentation")
+      %a(href="/ui/admin_orders") Orders
+    %li(role="presentation")
+      %a(href="/ui/admin_sales") Sales
+
+%article.admin_add_category
   %header
-    %h1 Admin Dashboard
-    %h3 Categories
-  %section
-    %ul
-      %li
-        %a(href="#") Dashboard
-        %a(href="#") Items
-        %a(href="#") Categories
-        %a(href="#") Orders
-        %a(href="#") Sales
-    %a(href="#") Add Category
-    %select(name="select")
-      %option
-        Edit
-      %option
-        Delete
-    %section
-    %table
+    %h3 Admin: Categories
+  %ul(class="nav nav-pills")
+    %li(role="presentation" class="active")
+      %a(href="/ui/admin_categories") All
+    %li(role="presentation")
+      %a(href="/ui/admin_add_category") Add
+  .container
+    %table(class="table table-striped")
       %tr
         %th Category Position
         %th Name
         %th Last Updated
         %th No. of Items
+        %th Edit
+        %th Delete
       %tr
         %td 1
         %td Savory
         %td 01/01/2015
         %td 5
+        %td
+          %button(type="submit" class="btn btn-warning") Edit
+        %td
+          %button(class="btn btn-danger" type="submit") Delete
 
       %tr
         %td 2
         %td Appetizer
         %td 01/01/2015
         %td 3
-
-    %button(type="submit") Save
-
+        %td
+          %button(type="submit" class="btn btn-warning") Edit
+        %td
+          %button(class="btn btn-danger" type="submit") Delete
 

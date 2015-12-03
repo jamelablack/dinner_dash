@@ -1,36 +1,58 @@
-%section.admin_items
+%article.admin_nav
+  %ul(class="nav nav-tabs")
+    %li(role="presentation")
+      %a(href="/ui/admin_dashboard") Dashboard
+    %li(role="presentation" class="active")
+      %a(href="/ui/admin_items") Items
+    %li(role="presentation")
+      %a(href="/ui/admin_categories") Categories
+    %li(role="presentation")
+      %a(href="/ui/admin_orders") Orders
+    %li(role="presentation")
+      %a(href="/ui/admin_sales") Sales
+
+%article.admin_add_category
   %header
-    %h1 Admin Dashboard
-    %h3 Items
-    %h4 Add Item
-  %section
-    %ul
-      %li
-        %a(href="#") Dashboard
-        %a(href="#") Items
-        %a(href="#") Categories
-        %a(href="#") Orders
-        %a(href="#") Sales
-    %a(href="#") Add Item
-  %form
-    %fieldset
-      .row
-        %label Item ID
-        %input(type="text" placeholder="item id")
-      .row
-        %label Name
-        %input(type="text" placeholder="name")
-      .row
-        %label Price
-        %input(type="text" placeholder="price")
-      .row
-        %label Category
-        %input(type="text" placeholder="categories")
-      .row
-        %label Description
-        %input(type="text" placeholder="description")
-      .row
-        %label Image
-        %input(type="file" placeholder="image")
-    %button(name="submit" placeholder="save") Save
+    %h3 Admin: Items
+  %ul(class="nav nav-pills")
+    %li(role="presentation")
+      %a(href="/ui/admin_items") All
+    %li(role="presentation" class="active")
+      %a(href="/ui/admin_add_item") Add
+  .container
+    %form.form-horizontal
+      %br
+      %fieldset
+        .form-group
+          %label.control-label.col-sm-3 Item ID
+          .col-sm-6
+            %input.form-control(type="text")
+        .form-group
+          %label.control-label.col-sm-3 Name
+          .col-sm-6
+            %input.form-control
+        .form-group
+          %label.control-label.col-sm-3 Price
+          .col-sm-6
+            %input.form-control
+        .form-group
+          %label.control-label.col-sm-3 Categories
+          .col-sm-6
+            %select.form-control
+        .form-group
+          %label.control-label.col-sm-3 Description
+          .col-sm-6
+            %textarea.form-control(rows="8")
+        .form-group
+          %label.control-label.col-sm-3 Large Cover
+          .col-sm-6
+            %col.btn.btn-file
+              %input.form-control(type="file")
+          %fieldset.actions.form-group
+            .col-sm-6.col-md-offset-3
+            %input(type="submit" value="Add Item" class="btn btn-success")
+
+
+
+
 

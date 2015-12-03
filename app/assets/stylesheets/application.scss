@@ -14,6 +14,9 @@ y'll appear at the top of the
 er style scope.
  *
  *= require_self
+ *= require whitespace-reset
+ *= require_tree .
 */
 @import "bootstrap-sprockets";
 @import "bootstrap";
+@import url(https://fonts.googleapis.com/css?family=Raleway:900,100,200,300,400,500,600,700,800);

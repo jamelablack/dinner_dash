@@ -1,17 +1,21 @@
-%section.register
-   %form
-      %header
-         %h1 Register
-         %fieldset
-            .row
-               %label Email Address
-               %input(type="email")
-            .row
-               %label Password
-               %input(type="password")
-            .row
-               %label Confirm Password
-               %input(type="password confirmation")
-         %fieldset
-            %button(type="submit" value="Sign Up") Sign Up
+%article.register
+   %header
+      %h1 Register
+   %form.form-horizontal
+      %fieldset
+         .form-group
+            %label.control-label.col-sm-2  Email Address:
+            .col-sm-6
+               %input.form-control(type="email")
+         .form-group
+            %label.control-label.col-sm-2  Password:
+            .col-sm-6
+               %input.form-control(type="password")
+         .form-group
+            %label.control-label.col-sm-2  Confirm Password:
+            .col-sm-6
+               %input.form-control(type="password confirmation")
+      %fieldset.actions.form-group
+         .col-sm-2
+         %button(type="submit" value="Register" class="btn btn-success") Register
 

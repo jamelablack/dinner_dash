@@ -1,20 +1,25 @@
-%section.user_profile
-   %article
-      %header
-         %h1 User Profile
-      .row
-         %h5 Username (Email)
-         %p john@example.com
-      .row
-         %h5 Password
-         %input(name="username" type="text" placeholder="password")
-      .row
-         %h5 Delivery Address
-         %p 1234 Prospect Pl, Washington, DC 20009
-      .row
-         %h5 Cell Phone
-         %p (202)555-5555
-      %fieldset
-         %a(href="#") Continue Ordering
-         %button(type="submit") Update
-         %button(type="submit") Delete Account
+%article.user_profile
+  %header
+    %h3 User Profile
+  %ul(class="nav nav-pills")
+    %li(role="presentation" class="active")
+      %a(href="/ui/user_profile") Profile
+    %li(role="presentation")
+      %a(href="/ui/user_order_history") Order History
+    %li(role="presentation")
+      %a(href="/ui/user_edit_profile") Edit
+    %li(role="presentation")
+      %a(href="/ui/home/")Back to Menu
+
+  .container
+    .description-image
+      %img(src="http://placehold.it/150x150")
+    .user_profile_info
+      %label.control-label.col-sm-2 Email
+      %p jamela.black@gmail.com
+      %label.control-label.col-sm-2 Full name
+      %p Jam Black
+      %label.control-label.col-sm-2 Phone
+      %p (555)555-5555
+      %label.control-label.col-sm-2 Address
+      %p 1234 14th Street NW, Washington, DC 20009

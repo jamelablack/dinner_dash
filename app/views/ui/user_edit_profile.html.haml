@@ -1,0 +1,52 @@
+%article.user_profile_edit
+  %header
+    %h3 User Profile
+  %ul(class="nav nav-pills")
+    %li(role="presentation")
+      %a(href="/ui/user_profile") Profile
+    %li(role="presentation")
+      %a(href="/ui/user_order_history") Order History
+    %li(role="presentation" class="active")
+      %a(href="/ui/user_edit_profile") Edit
+    %li(role="presentation")
+      %a(href="/ui/home/") Back to Menu
+  .container
+    %form.form-horizontal
+      %br
+      %fieldset
+        .form-group
+          %label.control-label.col-sm-3 Email
+          .col-sm-6
+            %input.form-control(type="email")
+        .form-group
+          %label.control-label.col-sm-3 Full name
+          .col-sm-6
+            %input.form-control(type="text")
+        .form-group
+          %label.control-label.col-sm-3 Phone
+          .col-sm-6
+            %input.form-control(type="tel")
+        .form-group
+          %label.control-label.col-sm-3 Password
+          .col-sm-6
+            %input.form-control(type="password")
+        .form-group
+          %label.control-label.col-sm-3 Password Confirmation
+          .col-sm-6
+            %input.form-control(type="password")
+        .form-group
+          %label.control-label.col-sm-3 Address
+          .col-sm-6
+            %textarea.form-control(rows="8")
+        .form-group
+          %label.control-label.col-sm-3 Avatar
+          .col-sm-6
+            %col.btn.btn-file
+              %input.form-control(type="file")
+            %input(type="submit" value="Delete Account" class="btn btn-danger")
+            %input(type="submit" value="Cancel" class="btn btn-warning")
+            %input(type="submit" value="Update" class="btn btn-success")
+
+
+
+

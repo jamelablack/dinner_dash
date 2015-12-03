@@ -1,0 +1,45 @@
+%article.user_order_history
+  %header
+    %h3 User Profile
+  %ul(class="nav nav-pills")
+    %li(role="presentation")
+      %a(href="/ui/user_profile") Profile
+    %li(role="presentation" class="active")
+      %a(href="/ui/user_order_history") Order History
+    %li(role="presentation")
+      %a(href="/ui/user_edit_profile") Edit
+    %li(role="presentation")
+      %a(href="/ui/home/")Back to Menu
+
+  .container
+    %table(class="table table-striped")
+      %tr
+        %th Order ID
+        %th Order Date
+        %th Order Details
+        %th Order Total ($)
+        %th Status
+        %th Last Updated
+        %th Order Type
+        %th Reorder
+      %tr
+        %td 123456
+        %td 01/01/2015
+        %td Tofu Dog and ish
+        %td $12.00
+        %td Delivered
+        %td 01/01/2015
+        %td Online
+        %td
+          %button(class="btn btn-info" type="submit") Reorder
+
+      %tr
+        %td 123456
+        %td 01/01/2015
+        %td Tofu Dog and ish
+        %td $12.00
+        %td Delivered
+        %td 01/01/2015
+        %td Online
+        %td
+          %button(class="btn btn-info" type="submit") Reorder

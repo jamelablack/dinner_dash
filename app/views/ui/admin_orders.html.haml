@@ -1,0 +1,45 @@
+%article.admin_nav
+  %ul(class="nav nav-tabs")
+    %li(role="presentation")
+      %a(href="/ui/admin_dashboard") Dashboard
+    %li(role="presentation")
+      %a(href="/ui/admin_items") Items
+    %li(role="presentation")
+      %a(href="/ui/admin_categories") Categories
+    %li(role="presentation" class="active")
+      %a(href="/ui/admin_orders") Orders
+    %li(role="presentation")
+      %a(href="/ui/admin_sales") Sales
+
+%article.admin_orders
+  %header
+    %h3 Admin: Orders
+  %ul(class="nav nav-pills")
+    %li(role="presentation" class="active")
+      %a(href="/ui/admin_items") All
+  .container
+    %table(class="table table-striped")
+      %tr
+        %th Order ID
+        %th Date
+        %th Order Total ($)
+        %th Customer
+        %th Status
+        %th Last Updated
+        %th Type
+      %tr
+        %td 123456
+        %td 01/01/2015
+        %td $12.00
+        %td Guest
+        %td Delivered
+        %td 01/01/2015
+        %td Online
+      %tr
+        %td 123456
+        %td 01/01/2015
+        %td $12.00
+        %td Guest
+        %td Delivered
+        %td 01/01/2015
+        %td Online

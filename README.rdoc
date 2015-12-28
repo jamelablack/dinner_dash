@@ -1,28 +1,61 @@
 == README
+Welcome to Dinner Dash, an online e-commerce platform for a restaurant to facilitate online ordering.
+This is an opensource project inspired by [Jumpstart Labs] (http://tutorials.jumpstartlab.com/projects/dinner_dash.html).
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Dependencies
+* Postgres
 
-Things you may want to cover:
+Installation with Homebrew is recommended:
+```
+brew update
+brew install postgresql
+```
 
-* Ruby version
+## Project Setup
+```
+git clone https://github.com/jamelablack/dinner_dash && cd dinner_dash
+bundle
+```
+## Database Setup
+* Create your config/database.yml file
+```
+development:
+  adapter: postgresql
+  encoding: unicode
+  database: dinner_dash_dev
+  pool: 5
+  username: your_username
+  password:
 
-* System dependencies
+test:
+  adapter: postgresql
+  encoding: unicode
+  database: dinnner_dash_test
+  pool: 5
+  username: your_username
+  password:
+```
+* Once created, run the following:
+```
+rake db:setup
+rake db:migrate
+```
 
-* Configuration
+## Ruby version
+ ruby 2.1.2
 
-* Database creation
+## Rails version
+ Rails 4.2.4
 
-* Database initialization
+## Heroku
+* Dinner Dash is deployed to Heroku: http://dinnerdash.herokuapp.com
 
-* How to run the test suite
+### Login
+* You log in by creating your username and passowrd procedding with ordering a food item from Dinner Dash.
 
-* Services (job queues, cache servers, search engines, etc.)
+* If you would like to access an account that includes an order history. You can login with the following credentials:
+```
+email: john.doe@example.com
+password: password
+```
 
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.

@@ -4,14 +4,17 @@ class SessionsController < ApplicationController
     user = User.find_by(email: params[:email].downcase)
     if user && user.authenticate(params[:password])
       sign_in(user)
-      redirect_to home_path
+      flash[:success] = "You're now signed in... order away!"
+      redirect_to items_path
     else
-      redirect_to sign_in_path
+      flash[:danger] = "Incorrect email or password."
+      redirect_to home_path
     end
   end
 
   def destroy
     sign_out_user
-    redirect_to home_path
+    flash[:success] = "You've signed out successfully. Come back soon!"
+    redirect_to root_path
   end
 end

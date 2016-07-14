@@ -7,4 +7,8 @@ Rails.application.routes.draw do
 
   resources :sessions, only: [:create, :destroy]
   get '/sign_out', to: 'sessions#destroy'
+
+  namespace :admin do
+    resources :items
+  end
 end

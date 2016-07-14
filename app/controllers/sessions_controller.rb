@@ -5,6 +5,10 @@ class SessionsController < ApplicationController
     if user && user.authenticate(params[:password])
       sign_in(user)
       flash[:success] = "You're now signed in... order away!"
+      if user.admin?
+        redirect_to admin_items_path
+        return
+      end
       redirect_to items_path
     else
       flash[:danger] = "Incorrect email or password."

@@ -1,62 +1,80 @@
-%select
-  %option %section.admin_dashboard
+%article.admin_dashboard
+  %ul(class="nav nav-tabs")
+    %li(role="presentation" class="active")
+      %a(href="/ui/admin_dashboard") Dashboard
+    %li(role="presentation")
+      %a(href="/ui/admin_items") Items
+    %li(role="presentation")
+      %a(href="/ui/admin_categories") Categories
+    %li(role="presentation")
+      %a(href="/ui/admin_orders") Orders
+    %li(role="presentation")
+      %a(href="/ui/admin_sales") Sales
+%article.admin-nav
   %header
-    %h1 Admin Dashboard
-  %section
-  %ul
-    %li
-      %a(href="#") Dashboard
-      %a(href="#") Items
-      %a(href="#") Categories
-      %a(href="#") Orders
-      %a(href="#") Sales
-  %section
+    %h3 Admin Dashboard
+  %button(class="btn btn-success pull-right")Items
+  %button(class="btn btn-info pull-right")Categories
+  %button(class="btn btn-warning pull-right")Orders
+  %button(class="btn btn-danger pull-right")Sales
+  %button(class="btn btn-default pull-right")Reports
+  %button(class="btn btn-primary pull-right")All
+%section.admin_orders
+  .container
     %h3 Orders
-    %table
+    %table(class="table table-striped")
       %tr
         %th Order ID
+        %th Date
+        %th Order Total ($)
+        %th Customer
         %th Status
-        %th Customer
-        %th Date
-      %tr
-        %td 123456
-        %td Paid
-        %td John Doe
-        %td 01/01/2015
-
-    %h3 Sales
-    %table
-      %tr
-        %th Transaction ID
-        %th Price
-        %th Customer
-        %th Date
-      %tr
-        %td 123456
-        %td $13.00
-        %td John Doe
-        %td 01/01/2015
-
-    %h3 Items
-    %a(href="#") Add Item
-    %table
-      %tr
-        %th Name
-        %th Category
-        %th Price
         %th Last Updated
+        %th Type
       %tr
-        %td Hummus with Pita
-        %td Appetizer
-        %td $13.00
+        %td 123456
         %td 01/01/2015
-
-    %h3 Categories
-    %a(href="#") Add Category
-    %table
+        %td $12.00
+        %td Guest
+        %td Delivered
+        %td 01/01/2016
+        %td Online
       %tr
+        %td 123456
+        %td 01/01/2015
+        %td $12.00
+        %td Guest
+        %td Delivered
+        %td 01/01/2016
+        %td Online
+      %tr
+%br
+  %section.admin_add_category
+    %header
+      %h3 Admin: Categories
+    %article.admin_add_category
+  %header
+    %h3 Admin: Categories
+  %ul(class="nav nav-pills")
+    %li(role="presentation" class="active")
+      %a(href="/ui/admin_categories") All
+    %li(role="presentation")
+      %a(href="/ui/admin_add_category") Add
+  .container
+    %table(class="table table-striped")
+      %tr
+        %th Category Position
         %th Name
+        %th Last Updated
         %th No. of Items
+        %th Edit
+        %th Delete
       %tr
+        %td 2
         %td Appetizer
-        %td 12
+        %td 01/01/2015
+        %td 3
+        %td
+          %button(type="submit" class="btn btn-warning") Edit
+        %td
+          %button(class="btn btn-danger" type="submit") Delete
